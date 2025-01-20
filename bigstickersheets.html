@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/webshop.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <picture>
+              <source srcset="images/Logo_TGT.avif" type="image/avif">
+              <img src="images/Logo_TGT.png" alt="Go to Home with The Garden Trio Logo" id="header-logo" width="160" height="160">
+            </picture>
+          </a>
+        <nav>
+            <!-- Hamburgar icon -->
+            <button id="mobile-menu" class="hamburger-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile menu -->
+            <ul id="mobile-links">
+                <li><a href="index.html"><img src="images/house-door-fill.svg" alt="Home icon" class="mobile-icon">HOME</a></li>
+                <li><a href="portfolio.html"><img src="images/icons8-portfolio-50.svg" alt="Portfolio icon" class="mobile-icon">PORTFOLIO</a></li>
+                <li><a href="shop.html"><img src="images/bag-check-fill.svg" alt="Shop icon" class="mobile-icon"> SHOP</a></li>
+                <li><a href="about.html"><img src="images/info-circle-fill.svg" alt="About icon" class="mobile-icon">ABOUT</a></li>
+                <li><a href="commission.html"><img src="images/pencil-fill.svg" alt="Commission icon" class="mobile-icon">COMMISSION</a></li>
+                <li><a href="shop-cart-checkout.html"><img src="images/basket.svg" alt="Cart icon" class="mobile-icon">SHOPPING CART</a></li>
+            </ul>
+
+            <!-- Desktop menu -->
+            <ul id="desktop-links" class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">HOME</a><img src="images/house-door-fill.svg" alt="House icon" class="icon"></li>
+                <li class="header-li"><a class="header-a" href="portfolio.html">PORTFOLIO</a><img src="images/icons8-portfolio-50.svg" alt=" Portfolio icon" class="icon"></li>
+                <li class="header-li"><a class="header-a" href="shop.html">SHOP</a><img src="images/bag-check-fill.svg" alt="Bag icon" class="icon"></li>
+                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a><img src="images/info-circle-fill.svg" alt="Info circle icon" class="icon"></li>
+                <li class="header-li"><a class="header-a" href="commission.html">COMMISSION</a><img src="images/pencil-fill.svg" alt="Pencil icon" class="icon"></li>
+                <li class="header-li">
+                    <a class="header-a" href="shop-cart-checkout.html">CART</a>
+                    <div class="cart-wrapper">
+                        <img src="images/basket.svg" alt="Shopping Cart icon" class="icon" width="16" height="16">
+                        <span class="cart-badge" id="nav-cart-count">0</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="breadcrumbs">
+        <p>You are here:</p>
+        <a href="/index.html">Home</a>
+        /
+        <a href="/shop.html">Shop</a>
+        /
+        <strong>2-pack Big Sticker Sheets</strong>
+    </nav>
+
+    <main class="product-page">
+        <section class="product-container">
+            <!-- Produktimage -->
+            <div class="product-image">
+                <picture>
+                    <source srcset="images/Twopack-bigsheets.webp" type="image/webp">
+                    <img src="images/Twopack-bigsheets.jpg" alt="Two Pack Big Sticker Sheets">
+                </picture>
+            </div>
+
+            <!-- Produktinforamtion  -->
+            <div class="product-details">
+                <h1>2-pack Big Sticker Sheets</h1>
+                <p>
+                    Introducing our 2-pack Big Sticker Sheets – a must-have for fans of adorable, nature-inspired designs! Each pack features two uniquely themed sticker sheets: one with lush green forest elements and charming characters, and the other with vibrant floral and water-themed designs. <br><br> These are part of our exclusive OC’s collection, making them perfect for creative crafts and personal projects. Ideal for adding a whimsical touch to your journals, laptops, phone cases, or any surface you choose. High-quality, durable, and easy to peel – bring your creativity to life with these delightful stickers!
+                </p>
+                <h2 class="product-price"><strong>Price:</strong> 170:-</h2>
+                <button class="to-cart-btn" id="toCartButton" 
+                onclick="addToBasketAndRedirect(this, '201', 'Two Pack Big Sticker Sheets', 170, 'images/Twopack-bigsheets.jpg', true)">
+                Add To Cart
+            </button>
+            </div>
+        </section>
+    </main>
+
+    <footer id="the-shop-footer">
+        <section class="footer-content">
+            <h2 class="visually-hidden">Our company information and policies</h2>
+            <section class="footer-left">
+                <h2 class="visually-hidden">Information Section</h2>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Shipping & Handling</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="footer-center">
+                <h2 class="visually-hidden">Contact Section</h2>
+                <h3>Contact Us</h3>
+                <p><a href="contact.html" class="footer-link">Visit Our Contact Page</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@thegardentrio.com">info@thegardentrio.com</a></p><br>
+                <h3><strong>Address</strong></h3>
+                <p>Blomsterstigen 3, 123 45 Trädgårdsby Sweden</p>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="footer-right">
+                <h2 class="visually-hidden">Social Media Section</h2>
+                <h3>Follow Our Socials</h3>
+                <section class="social-icons-shop">
+                    <h2 class="visibal-items">Links of our social media below</h2>
+                    <a href="#"><img src="images/instagram.svg" alt="Instagram" width="32" height="32"></a>
+                    <a href="#"><img src="images/tiktok.svg" alt="Tiktok" width="32" height="32"></a>
+                    <a href="#"><img src="images/youtube.svg" alt="YouTube" width="32" height="32"></a>
+                    <a href="#"><img src="images/reddit.svg" alt="Reddit" width="32" height="32"></a>
+                    <a href="info@thegardentrio.com"><img src="images/envelope.svg" alt="Email" width="32" height="32"></a>
+                </section>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/webshop.js" defer></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body id="shop-page">
+    <header>
+        <a href="index.html">
+            <picture>
+                <source srcset="images/Logo_TGT.avif" type="image/avif">
+                <img src="images/Logo_TGT.png" alt="Go to Home with The Garden Trio Logo" id="header-logo" width="160" height="160">
+            </picture>
+        </a>
+        <nav>
+            <!-- Hamburgar icon -->
+            <button id="mobile-menu" class="hamburger-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile menu -->
+            <ul id="mobile-links">
+                <li><a href="index.html"><img src="images/house-door-fill.svg" alt="Home icon" class="mobile-icon">HOME</a></li>
+                <li><a href="portfolio.html"><img src="images/icons8-portfolio-50.svg" alt="Portfolio icon" class="mobile-icon">PORTFOLIO</a></li>
+                <li><a href="shop.html"><img src="images/bag-check-fill.svg" alt="Shop icon" class="mobile-icon"> SHOP</a></li>
+                <li><a href="about.html"><img src="images/info-circle-fill.svg" alt="About icon" class="mobile-icon">ABOUT</a></li>
+                <li><a href="commission.html"><img src="images/pencil-fill.svg" alt="Commission icon" class="mobile-icon">COMMISSION</a></li>
+                <li><a href="shop-cart-checkout.html"><img src="images/basket.svg" alt="Cart icon" class="mobile-icon">SHOPPING CART</a></li>
+            </ul>
+
+            <!-- Desktop menu -->
+            <ul id="desktop-links" class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">HOME</a><img src="images/house-door-fill.svg" alt="House icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="portfolio.html">PORTFOLIO</a><img src="images/icons8-portfolio-50.svg" alt=" Portfolio icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a current-page" href="shop.html">SHOP</a><img src="images/bag-check-fill.svg" alt="Bag icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a><img src="images/info-circle-fill.svg" alt="Info circle icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="commission.html">COMMISSION</a><img src="images/pencil-fill.svg" alt="Pencil icon" class="icon" width="16" height="16"></li>
+                <li class="header-li">
+                    <a class="header-a" href="shop-cart-checkout.html">CART</a>
+                    <div class="cart-wrapper">
+                        <img src="images/basket.svg" alt="Shopping Cart icon" class="icon" width="16" height="16">
+                        <span class="cart-badge" id="nav-cart-count">0</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="breadcrumbs">
+        <h2 class="breadcrumb-heading">You are here:</h2>
+        <a href="/index.html">Home</a>
+        /
+        <strong>Shop</strong>
+    </nav>
+
+    <main class="container">
+        <div id="notify"></div>
+        <h2 class="visually-hidden">Sidebar section</h2>
+        <aside id="the-sidebar-nav">
+            <h2>Categories:</h2>
+            <nav>
+                <ul class="sidebar-content">
+                    <li><a href="#" data-category="all">Show All</a></li>
+                    <li><a href="#" data-category="keychains">Keychains</a></li>
+                    <li><a href="#" data-category="sticker-sheets">Sticker Sheets</a></li>
+                    <li><a href="#" data-category="washi-tapes">Washi Tapes</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content with the section you want to keep -->
+        <section class="grid-products-container" id="page-buyproducts">
+            <h1>Discover our exclusive TGT collection</h1>
+            <section id="product-video">
+                <h2>See our products in detail!</h2>
+                <video controls width="600" height="300" poster="images/post.jpg">
+                    <source src="images/product-video.webm" type="video/webm">
+                    <source src="images/product-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <section id="shopping-items">
+                <h2>From digital to physical products</h2>
+                <p class="paragraph-margin">
+                    Welcome to the ultimate destination for TGT products! Here, you’ll find an exclusive collection of TGT
+                    items, from limited-edition physical merchandise to premium digital downloads. Our products are crafted
+                    with fans in mind, so don't miss out on owning a piece of TGT!
+                </p>
+                <p class="paragraph-margin">
+                    We carefully select and stock each item to meet the high standards of our TGT community. Remember, quantities
+                    are limited – once they're gone, they might not come back! Secure your favorites now and experience the
+                    quality and excitement of our unique TGT offerings.
+                </p>
+                <p>
+                    Explore the collection below and find something that speaks to you – from collectibles to digital content,
+                    there's something for everyone. Don’t wait too long, as these items are in high demand!
+                </p>
+            </section>
+
+            <!-- Add the Small Basket -->
+            <div id="small-basket-container">
+                <h2>Shopping Cart</h2>
+                <div id="basket-holder">
+                    <ul id="basket">
+                        <li>The shopping car is empty</li>
+                    </ul>
+                    <a href="shop-cart-checkout.html" class="checkout-button submit-order">To Cart</a>
+                </div>
+            </div>
+
+            <!-- Grid of Products -->
+            <section class="product-row">
+                <h2 class="visually-hidden">Product Categories</h2>
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychains 1</h2>
+                    <a href="mushykeychain.html" aria-label="View Mushy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/mushy-keychain.webp" type="image/webp">
+                            <img src="images/mushy-keychain.jpg" alt="Mushy keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Mushy Keychain</h3>
+                    <h4 class="product-price1">150:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '001', 'Mushy Keychain', 150, 'images/mushy-keychain.JPG', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 2</h2>
+                    <a href="leafykeychain.html" aria-label="View Leafy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/leafy-keychain.webp" type="image/webp">
+                            <img src="images/leafy-keychain.jpg" alt="Leafy keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Leafy Keychain</h3>
+                    <h4 class="product-price1">150:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '002', 'Leafy Keychain', 150, 'images/leafy-keychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 3</h2>
+                    <a href="petalykeychain.html" aria-label="View Petaly Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/petaly-keychain.webp" type="image/webp">
+                            <img src="images/petaly-keychain.jpg" alt="Petaly keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Petaly Keychain</h3>
+                    <h4 class="product-price1">150:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '003', 'Petaly Keychain', 150, 'images/petaly-keychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 4</h2>
+                    <a href="mushysmallkeychain.html" aria-label="View Small Mushy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/mushy-smallkeychain.webp" type="image/webp">
+                            <img src="images/mushy-smallkeychain.jpg" alt="Mushy Small keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Mushy Small Keychain</h3>
+                    <h4 class="product-price1">100:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '004', 'Mushy Small Keychain', 100, 'images/mushy-smallkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 4</h2>
+                    <a href="leafysmallkeychain.html" aria-label="View Small Leafy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/leafy-smallkeychain.webp" type="image/webp">
+                            <img src="images/leafy-smallkeychain.jpg" alt="Leafy Small keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Leafy Small Keychain</h3>
+                    <h4 class="product-price1">100:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '005', 'Leafy Small Keychain', 100, 'images/leafy-smallkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 5</h2>
+                    <a href="petalysmallkeychain.html" aria-label="View Small Petaly Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/petaly-smallkeychain.webp" type="image/webp">
+                            <img src="images/petaly-smallkeychain.jpg" alt="Petaly Small keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Petaly Small Keychain</h3>
+                    <h4 class="product-price1">100:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '006', 'Petaly Small Keychain', 100, 'images/petaly-smallkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 6</h2>
+                    <a href="mushybigkeychain.html" aria-label="View Big Mushy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/mushy-bigkeychain.webp" type="image/webp">
+                            <img src="images/mushy-bigkeychain.jpg" alt="Mushy Big Keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Mushy Big Keychain</h3>
+                    <h4 class="product-price1">200:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '007', 'Mushy Big Keychain', 200, 'images/mushy-bigkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 7</h2>
+                    <a href="leafybigkeychain.html" aria-label="View Big Leafy Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/leafy-bigkeychain.webp" type="image/webp">
+                            <img src="images/leafy-bigkeychain.jpg" alt="Leafy Big Keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Leafy Big Keychain</h3>
+                    <h4 class="product-price1">200:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '008', 'Leafy Big Keychain', 200, 'images/leafy-bigkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card keychains">
+                    <h2 class="visually-hidden">Keychain 7</h2>
+                    <a href="petalybigkeychain.html" aria-label="View Big Petaly Keychain Product">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/petaly-bigkeychain.webp" type="image/webp">
+                            <img src="images/petaly-bigkeychain.jpg" alt="Petaly Big Keychain" width="300" height="300">
+                        </picture>
+                    </a>
+                    <h3>Petaly Big Keychain</h3>
+                    <h4 class="product-price1">200:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '009', 'Petaly Big Keychain', 200, 'images/petaly-bigkeychain.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card sticker-sheets">
+                    <h2 class="visually-hidden">Sticker Sheets 1</h2>
+                    <a href="bigstickersheets.html" aria-label="View Big Two Pack Big Sticker Sheets">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/Twopack-bigsheets.webp" type="image/webp">
+                            <img src="images/Twopack-bigsheets.jpg" alt="Two Pack Big Sticker Sheets" width="250" height="250">
+                        </picture>
+                    </a>
+                    <h3>Two Pack Big Sticker Sheets</h3>
+                    <h4 class="product-price1">170:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '201', 'Two Pack Big Sticker Sheets', 170, 'images/Twopack-bigsheets.jpg', true)">Buy Now</button>
+                </section>
+
+                <section class="product-card sticker-sheets">
+                    <h2 class="visually-hidden">Sticker Sheets 2</h2>
+                    <a href="smallstickersheets.html" aria-label="View Big Two Pack Small Sticker Sheets">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/Twopack-smallstickersheets.webp" type="image/webp">
+                            <img src="images/Twopack-smallstickersheets.jpg" alt="Two Pack Small Sticker Sheets" width="250" height="250">
+                        </picture>
+                    </a>
+                    <h3>Two Pack Small Sticker Sheets</h3>
+                    <h4 class="product-price1">120:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '202', 'Two Pack Small Sticker Sheets', 120, 'images/Twopack-smallstickersheets.jpg', true)">Buy Now</button>
+                </section>
+
+                <br>
+
+                <section class="product-card washi-tapes">
+                    <h2 class="visually-hidden">Washi Tapes</h2>
+                    <a href="washitapes.html" aria-label="View Three Pack Washi Tapes">
+                        <!-- Modern format for better performance and standardformat for fallback -->
+                        <picture>
+                            <source srcset="images/3pack-washitapes.webp" type="image/webp">
+                            <img src="images/3pack-washitapes.jpg" alt="Three Pack Washi Tapes" width="250" height="250">
+                        </picture>
+                    </a>
+                    <h3>Three Pack Washi Tapes</h3>
+                    <h4 class="product-price1">80:-</h4>
+                    <button class="buy-now-btn" onclick="addToBasket(this, '301', 'Three Pack Washi Tapes', 80, 'images/3pack-washitapes.jpg', true)">Buy Now</button>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <section id="chibi-section">
+        <h2 class="visually-hidden">Section of the chibi characters in banner image</h2>
+        <picture>
+            <source srcset="images/bannerchibi.webp" type="image/webp">
+            <img src="images/bannerchibi.png" alt="Three chibi figures characters showing happy expression" width="1100" height="275">
+        </picture>
+    </section>
+
+    <footer id="the-shop-footer">
+        <section class="footer-content">
+            <h2 class="visually-hidden">Our company information and policies</h2>
+            <section class="footer-left">
+                <h2 class="visually-hidden">Information Section</h2>
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Shipping & Handling</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="footer-center">
+                <h2 class="visually-hidden">Contact Section</h2>
+                <h3>Contact Us</h3>
+                <p><a href="contact.html" class="footer-link">Visit Our Contact Page</a></p>
+                <p><strong>Email:</strong> <a href="mailto:info@thegardentrio.com">info@thegardentrio.com</a></p><br>
+                <h3><strong>Address</strong></h3>
+                <p>Blomsterstigen 3, 123 45 Trädgårdsby Sweden</p>
+            </section>
+
+            <!-- Social Media Section -->
+            <section class="footer-right">
+                <h2 class="visually-hidden">Social Media Section</h2>
+                <h3>Follow Our Socials</h3>
+                <section class="social-icons-shop">
+                    <h2 class="visibal-items">Links of our social media below</h2>
+                    <a href="#"><img src="images/instagram.svg" alt="Instagram" width="32" height="32"></a>
+                    <a href="#"><img src="images/tiktok.svg" alt="Tiktok" width="32" height="32"></a>
+                    <a href="#"><img src="images/youtube.svg" alt="YouTube" width="32" height="32"></a>
+                    <a href="#"><img src="images/reddit.svg" alt="Reddit" width="32" height="32"></a>
+                    <a href="info@thegardentrio.com"><img src="images/envelope.svg" alt="Email" width="32" height="32"></a>
+                </section>
+            </section>
+        </section>
+    </footer>
+</body>
+
+</html>

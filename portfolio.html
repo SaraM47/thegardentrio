@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/webshop.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox-plus-jquery.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.min.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <picture>
+                <source srcset="images/Logo_TGT.avif" type="image/avif">
+                <img src="images/Logo_TGT.png" alt="Go to Home with The Garden Trio Logo" id="header-logo" width="160" height="160">
+            </picture>
+        </a>
+        <nav>
+            <!-- Hamburgar icon -->
+            <button id="mobile-menu" class="hamburger-btn" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Mobile menu -->
+            <ul id="mobile-links">
+                <li><a href="index.html"><img src="images/house-door-fill.svg" alt="Home icon" class="mobile-icon">HOME</a></li>
+                <li><a href="portfolio.html"><img src="images/icons8-portfolio-50.svg" alt="Portfolio icon" class="mobile-icon">PORTFOLIO</a></li>
+                <li><a href="shop.html"><img src="images/bag-check-fill.svg" alt="Shop icon" class="mobile-icon"> SHOP</a></li>
+                <li><a href="about.html"><img src="images/info-circle-fill.svg" alt="About icon" class="mobile-icon">ABOUT</a></li>
+                <li><a href="commission.html"><img src="images/pencil-fill.svg" alt="Commission icon" class="mobile-icon">COMMISSION</a></li>
+                <li><a href="shop-cart-checkout.html"><img src="images/basket.svg" alt="Cart icon" class="mobile-icon">SHOPPING CART</a></li>
+            </ul>
+
+            <!-- Desktop menu -->
+            <ul id="desktop-links" class="header-ul">
+                <li class="header-li"><a class="header-a" href="index.html">HOME</a><img src="images/house-door-fill.svg" alt="House icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a current-page" href="portfolio.html">PORTFOLIO</a><img src="images/icons8-portfolio-50.svg" alt=" Portfolio icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="shop.html">SHOP</a><img src="images/bag-check-fill.svg" alt="Bag icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a><img src="images/info-circle-fill.svg" alt="Info circle icon" class="icon" width="16" height="16"></li>
+                <li class="header-li"><a class="header-a" href="commission.html">COMMISSION</a><img src="images/pencil-fill.svg" alt="Pencil icon" class="icon" width="16" height="16"></li>
+                <li class="header-li">
+                    <a class="header-a" href="shop-cart-checkout.html">CART</a>
+                    <div class="cart-wrapper">
+                        <img src="images/basket.svg" alt="Shopping Cart icon" class="icon" width="16" height="16">
+                        <span class="cart-badge" id="nav-cart-count">0</span>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <picture>
+        <source srcset="images/banner.avif" type="image/avif">
+        <source srcset="images/banner.jpg" type="image/jpeg">
+        <img src="images/banner.jpg" alt="Banner of the OC characters" id="banner" width="1200" height="400">
+    </picture>
+
+    <nav class="breadcrumbs" id="breadcrumbs-vers2">
+        <h2 class="breadcrumb-heading">You are here:</h2>
+        <a href="/index.html">Home</a>
+        /
+        <strong>Portfolio</strong>
+    </nav>
+
+
+    <section class="grid-container" id="page-portfolio">
+        <h1>~ The World of Originality ~</h1>
+
+        <section class="welcome-section">
+            <h2>Original characters gallery</h2>
+            <p>Discover a vibrant gallery of unique characters brought to life through captivating illustrations. Each artwork tells its own story, blending creativity and imagination in every detail. Explore the diverse collection and immerse yourself in the artistic journey behind these one-of-a-kind creations.</p>
+        </section>
+
+        <h2 class="main-heading">Illustration gallery</h2>
+        <section class="illustration-gallery">
+            <h2 class="visibal-items">Illustration Section 1</h2>
+            <section class="image-container">
+                <a href="images/art1.avif" target="_blank" data-lightbox="illustrations" data-title="Flying Turtles">
+                    <img src="images/art1.jpg" alt="Three chibi girls sitting on a pond watching flying turtles in the sky" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Flying Turtles</h2>
+            </section>
+            <section class="image-container">
+                <a href="images/art2.avif" data-lightbox="illustrations" data-title="Lotus">
+                    <img src="images/art2.jpg" alt="Three chibi girls riding a glass turle on water" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Lotus</h2>
+            </section>
+        </section>
+
+        <section class="illustration-gallery">
+            <h2 class="visibal-items">Illustration Section 2</h2>
+            <section class="image-container">
+                <a href="images/art3.avif" data-lightbox="illustrations" data-title="Hidden Valley">
+                    <img src="images/art3.jpg" alt="Three chibis girls riding a leaf" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Hidden Valley</h2>
+            </section>
+            <section class="image-container">
+                <!-- Hidden link used only for Lightbox -->
+                <a href="images/art4.avif" data-lightbox="illustrations" data-title="Swan Ride">
+                    <img src="images/art4.jpg" alt="Three chibis girls riding a white swan" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Swan Ride</h2>
+            </section>
+        </section>
+
+        <section class="illustration-gallery">
+            <h2 class="visibal-items">Illustration Section 3</h2>
+            <section class="image-container">
+                <a href="images/art5.avif" data-lightbox="illustrations" data-title="Green Jar">
+                    <img src="images/art5.jpg" alt="Three chibis girls in a glass jar discovering in the nature" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Green Jar</h2>
+            </section>
+            <section class="image-container">
+                <a href="images/art6.avif" data-lightbox="illustrations" data-title="Lotus in Stillness">
+                    <img src="images/art6.jpg" alt="Three chibis girls sitting on a lotus" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+
+                <h2>Lotus in Stillness</h2>
+            </section>
+        </section>
+
+        <section class="illustration-gallery">
+            <h2 class="visibal-items">Illustration Section 4</h2>
+            <section class="image-container">
+                <a href="images/art7.avif" data-lightbox="illustrations" data-title="Sealing">
+                    <img src="images/art7.jpg" alt="Three chibis riding a boat on a water lake" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Sealing</h2>
+            </section>
+            <section class="image-container">
+                <a href="images/art8.avif" data-lightbox="illustrations" data-title="Island">
+                    <img src="images/art8.jpg" alt="Three chibis girls riding a boat in different nature environments" class="gallery-image" loading="lazy" width="600" height="400"></a>
+                <h2>Island</h2>
+            </section>
+
+        </section>
+        <section class="illustration-gallery">
+            <h2 class="visibal-items">Illustration Section 5</h2>
+            <section class="image-container">
+                <a href="images/art9.avif" data-lightbox="illustrations" data-title="Underwater">
+                    <img src="images/art9.jpg" alt="Three chibis girls on the deep ocean" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Underwater</h2>
+            </section>
+            <section class="image-container">
+                <a href="images/art10.avif" data-lightbox="illustrations" data-title="Deep Sea">
+                    <img src="images/art10.jpg" alt="Three chibi girls in the water with fishes" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Deep Sea</h2>
+            </section>
+
+        </section>
+        <section class="illustration-gallery">
+            <h3 class="visibal-items">Illustration Section 6</h3>
+            <section class="image-container">
+                <a href="images/art11.avif" data-lightbox="illustrations" data-title="Big Bird">
+                    <img src="images/art11.jpg" alt="Three chibi girls riding a big bird" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>Big Bird</h2>
+            </section>
+            <section class="image-container">
+                <a href="images/art12.avif" data-lightbox="illustrations" data-title="In Sky">
+                    <img src="images/art12.jpg" alt="Variations of small illustrations of three chibi girls in a bird area" class="gallery-image" loading="lazy" width="600" height="400">
+                </a>
+                <h2>In Sky</h2>
+            </section>
+        </section>
+
+        <footer>
+            <div class="footer-line"></div>
+            <div class="social-icons">
+                <a href="#"><img src="images/instagram.svg" alt="Instagram" width="32" height="32"></a>
+                <a href="#"><img src="images/tiktok.svg" alt="Tiktok" width="32" height="32"></a>
+                <a href="#"><img src="images/youtube.svg" alt="YouTube" width="32" height="32"></a>
+                <a href="#"><img src="images/reddit.svg" alt="Reddit" width="32" height="32"></a>
+                <a href="info@thegardentrio.com"><img src="images/envelope.svg" alt="Email" width="32" height="32"></a>
+            </div>
+        </footer>
+
+    </section>
+</body>
+
+</html>
