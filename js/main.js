@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 // Function for the mobile menu
 document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuIcon = document.getElementById("mobile-menu");
@@ -54,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
 
 // Function for "Commission-page"
 // Function to save and display the selected deadline date
