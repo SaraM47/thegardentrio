@@ -35,3 +35,6 @@ A responsive and visually appealing webshop built for a fictional company sellin
 * Implementing backend features such as a payment system.
 * Adding multilingual support.
 * Integrating additional JavaScript features to enhance the user experience.
+
+## Changelog
+For a full list of updates and improvements, see the [Changelog](CHANGELOG.md).
