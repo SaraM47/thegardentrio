@@ -1,7 +1,7 @@
 # Webshop: The Garden Trio
 
 ## Description
-A responsive and visually appealing webshop built for a fictional company selling merchandise of my own original characters, created as part of the course *Graphic Techniques for the Web*. The website includes both a portfolio section and a shop page to showcase and sell products.
+A responsive and visually appealing webshop built for a fictional company selling merchandise of my original characters, created as part of the course *Graphic Techniques for the Web*. The website includes both a portfolio section and a shop page to showcase and sell products.
 
 ## Features
 - **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
@@ -14,7 +14,7 @@ A responsive and visually appealing webshop built for a fictional company sellin
 
 ## Acknowledgments
 - All photographs, digital illustrations, logos, and artwork used in this project were created exclusively by me.
-- Icons used in the project are sourced from external libraries or plattform, such as as Bootstrap
+- Icons used in the project are sourced from external libraries or platform, such as Bootstrap
 
 ## Technologies and Tools
 - **Frontend:** HTML5, CSS3, JavaScript (jQuery, Lightbox2).
