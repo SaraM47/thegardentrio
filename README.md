@@ -11,7 +11,7 @@ A responsive and visually appealing webshop built for a fictional company sellin
 - **Static Shopping Cart:** Add products to a cart with basic JavaScript functionality.
 - **About Page:** Includes information about the company and the developer.
 - **Video Content:** At least one video showcasing the products.
-- - **AI Chatbot Integration:** Tidio chatbot embedded for real-time customer assistance and FAQs.
+- **AI Chatbot Integration:** Tidio chatbot embedded for real-time customer assistance and FAQs.
 
 ## Acknowledgments
 - All photographs, digital illustrations, logos, and artwork used in this project were created exclusively by me.
