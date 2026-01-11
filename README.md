@@ -16,6 +16,7 @@ A responsive and visually appealing webshop built for a fictional company sellin
 ## Acknowledgments
 - All photographs, digital illustrations, logos, and artwork used in this project were created exclusively by me.
 - Icons used in the project are sourced from external libraries or platform, such as Bootstrap
+- Improve the webshop functionality to more realistic checkout process
 
 ## Technologies and Tools
 - **Frontend:** HTML5, CSS3, JavaScript (jQuery, Lightbox2).
