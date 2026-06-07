@@ -8,52 +8,60 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/main.js" defer></script>
     <script src="js/webshop.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
 <body>
     <header>
-        <a href="index.html">
-            <picture>
-              <source srcset="images/Logo_TGT.avif" type="image/avif">
-              <img src="images/Logo_TGT.png" alt="Go to Home with The Garden Trio Logo" id="header-logo" width="160" height="160">
-            </picture>
-          </a>
-        <nav>
-            <!-- Hamburgar icon -->
-            <button id="mobile-menu" class="hamburger-btn" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
+        <!-- Logo - The Garden Trio -->
+        <button id="logo-menu-btn" class="header-logo-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="compass-menu">
+            <span class="logo-menu-circle">
+                <picture>
+                    <source srcset="images/Logo_TGT.avif" type="image/avif">
+                    <img src="images/Logo_TGT.png" alt="The Garden Trio Logo" id="header-logo" width="160" height="160">
+                </picture>
+
+                <span class="logo-menu-text">MENU</span>
+            </span>
+        </button>
+
+
+        <!-- Circular Menu -->
+        <nav id="compass-menu" class="compass-menu">
+            <button id="menu-close-btn" class="menu-close-btn">
+                <i class="bi bi-x-lg"></i>
             </button>
 
-            <!-- Mobile menu -->
-            <ul id="mobile-links">
-                <li><a href="index.html"><img src="images/house-door-fill.svg" alt="Home icon" class="mobile-icon">HOME</a></li>
-                <li><a href="portfolio.html"><img src="images/icons8-portfolio-50.svg" alt="Portfolio icon" class="mobile-icon"> PORTFOLIO</a></li>
-                <li><a href="shop.html"><img src="images/bag-check-fill.svg" alt="Shop icon" class="mobile-icon">SHOP</a></li>
-                <li><a href="about.html"><img src="images/info-circle-fill.svg" alt="About icon" class="mobile-icon">ABOUT</a></li>
-                <li><a href="commission.html"><img src="images/pencil-fill.svg" alt="Commission icon" class="mobile-icon">COMMISSION</a></li>
-                <li><a href="shop-cart-checkout.html"><img src="images/basket.svg" alt="Cart icon" class="mobile-icon">SHOPPING CART</a></li>
-            </ul>
+            <a href="index.html" class="goo-menu-item item-1">
+                HOME
+            </a>
 
-            <!-- Desktop menu -->
-            <ul id="desktop-links" class="header-ul">
-                <li class="header-li"><a class="header-a" href="index.html">HOME</a><img src="images/house-door-fill.svg" alt="House icon" class="icon" width="16" height="16"></li>
-                <li class="header-li"><a class="header-a" href="portfolio.html">PORTFOLIO</a><img src="images/icons8-portfolio-50.svg" alt=" Portfolio icon" class="icon" width="16" height="16"></li>
-                <li class="header-li"><a class="header-a" href="shop.html">SHOP</a><img src="images/bag-check-fill.svg" alt="Bag icon" class="icon" width="16" height="16"></li>
-                <li class="header-li"><a class="header-a" href="about.html">ABOUT</a><img src="images/info-circle-fill.svg" alt="Info circle icon" class="icon" width="16" height="16"></li>
-                <li class="header-li"><a class="header-a" href="commission.html">COMMISSION</a><img src="images/pencil-fill.svg" alt="Pencil icon" class="icon" width="16" height="16"></li>
-                <li class="header-li">
-                    <a class="header-a" href="shop-cart-checkout.html">CART</a>
-                    <div class="cart-wrapper">
-                        <img src="images/basket.svg" alt="Shopping Cart icon" class="icon" width="16" height="16">
-                        <span class="cart-badge" id="nav-cart-count">0</span>
-                    </div>
-                </li>
-            </ul>
+            <a href="portfolio.html" class="goo-menu-item item-2">
+                PORTFOLIO
+            </a>
+
+            <a href="shop.html" class="goo-menu-item item-3">
+                SHOP
+            </a>
+
+            <a href="about.html" class="goo-menu-item item-4">
+                ABOUT
+            </a>
+
+            <a href="commission.html" class="goo-menu-item item-5">
+                COMMISSION
+            </a>
+
+            <a href="shop-cart-checkout.html" class="goo-menu-item item-6">
+                CART
+            </a>
+
         </nav>
+
+        <!-- Overlay to close menu when clicking outside -->
+        <div id="menu-overlay" class="menu-overlay"></div>
     </header>
 
     <nav class="breadcrumbs" id="breadcrumbs">
