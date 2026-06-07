@@ -11,6 +11,8 @@
 * Rad 386: Lägger till en funktion updateCartBadge() som räknar antalet produkter i varukorgen genom att läsa från localStorage och uppdaterar både checkoutBasket och emptyBasket för att tömma produktantalet.
 * Rad 148: Lägger till utskrift av total summan i varukorgen.
 * Uppdaterade meddelanden, aviseringar och dynamiskt innehåll i enlighet.
+* Uppdaterade meddelanden, aviseringar och dynamiskt innehåll i enlighet.
+* Ersatt alert() och confirm() i checkoutBasket() och emptyBasket() med en egen modal-popup som kan stylas med CSS.
 */
 
 const basketEl = document.getElementById("basket"); // Varukorgen i DOM
@@ -42,7 +44,7 @@ function addToBasket(el, id, name, cost, image, notify = false) {
     let numOfItems = 1;
 
     // Sätt en klass på anropande class
-    el.classList.add("clicked");
+    // el.classList.add("clicked");
 
     // Läs in listan
     let currentBasket = JSON.parse(localStorage.getItem("basket"));
@@ -331,10 +333,42 @@ function showCheckout() {
     }
 }
 
+// Funktion för att visa en egen stylad modal-popup
+function showModal(title, message, showCancel = false, onConfirm = null) {
+    const modalEl = document.getElementById("custom-modal");
+    const modalTitleEl = document.getElementById("modal-title");
+    const modalTextEl = document.getElementById("modal-text");
+    const modalCancelEl = document.getElementById("modal-cancel");
+    const modalOkEl = document.getElementById("modal-ok");
+
+    if (!modalEl || !modalTitleEl || !modalTextEl || !modalCancelEl || !modalOkEl) {
+        return;
+    }
+
+    modalTitleEl.textContent = title;
+    modalTextEl.textContent = message;
+
+    modalCancelEl.style.display = showCancel ? "inline-block" : "none";
+
+    modalEl.classList.add("active");
+
+    modalOkEl.onclick = function () {
+        modalEl.classList.remove("active");
+
+        if (typeof onConfirm === "function") {
+            onConfirm();
+        }
+    };
+
+    modalCancelEl.onclick = function () {
+        modalEl.classList.remove("active");
+    };
+}
 /* Till kassan */
 function checkoutBasket() {
     let basketItems = JSON.parse(localStorage.getItem("basket"));
-    if (basketItems != null) {
+
+    if (basketItems != null && basketItems.length > 0) {
         let itemCount = 0;
         let totalSum = 0;
 
@@ -346,35 +380,42 @@ function checkoutBasket() {
             }
         }
 
+        let orderMessage = "";
+
         if (itemCount == 1) {
-            alert("Your order has been received! One item - total amount: " + totalSum + ":-");
+            orderMessage = "Your order has been received! One item - total amount: " + totalSum + ":-";
         } else {
-            alert("Your order has been received! " + itemCount + "pieces of goods - total amount: " + totalSum + ":-");
+            orderMessage = "Your order has been received! " + itemCount + " pieces of goods - total amount: " + totalSum + ":-";
         }
 
-        // Tom varukorgen
-        emptyBasket(false);
+        showModal("Order Confirmed", orderMessage, false, function () {
+            // Tom varukorgen
+            emptyBasket(false);
 
-        // Töm badgen
-        updateCartBadge();
+            // Töm badgen
+            updateCartBadge();
+        });
 
     } else {
-        alert("No items in your shopping cart!");
+        showModal("Shopping Cart", "No items in your shopping cart!");
     }
 }
 
 /* Töm varukorg */
 function emptyBasket(conf = true) {
     if (conf == true) {
-        if (confirm("Are you sure you want to delete all items?")) {
-            localStorage.removeItem("basket");
-            showBasket();
-            showSmallBasket();
-            showCheckout();
-            updateCartBadge();
-        } else {
-            return;
-        }
+        showModal(
+            "Clear Cart",
+            "Are you sure you want to delete all items?",
+            true,
+            function () {
+                localStorage.removeItem("basket");
+                showBasket();
+                showSmallBasket();
+                showCheckout();
+                updateCartBadge();
+            }
+        );
     } else {
         localStorage.removeItem("basket");
         showBasket();
@@ -387,7 +428,10 @@ function emptyBasket(conf = true) {
 // Funktion för att hämta varukorgen från Local Storage som ska räkna totala antalet produkter i varukorgen
 function updateCartBadge() {
     let basketItems = JSON.parse(localStorage.getItem("basket")) || [];
-    let numOfItems = basketItems.reduce((total, item) => total + item.nums, 0);
+
+    let numOfItems = basketItems.reduce((total, item) => {
+        return total + Number(item.nums || 0);
+    }, 0);
 
     // Hämta elementet där siffran ska visas
     const navCartCountEl = document.getElementById("nav-cart-count");
