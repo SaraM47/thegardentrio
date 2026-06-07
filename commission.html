@@ -9,7 +9,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/webshop.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -57,8 +57,13 @@
                 CART
                 <span id="nav-cart-count" class="cart-badge">0</span>
             </a>
-
         </nav>
+
+        <!-- Header Cart Badge -->
+        <a href="shop-cart-checkout.html" class="header-cart-link">
+            CART
+            <span id="header-cart-count" class="header-cart-badge">0</span>
+        </a>
 
         <!-- Overlay to close menu when clicking outside -->
         <div id="menu-overlay" class="menu-overlay"></div>
@@ -82,68 +87,68 @@
     <section id="terms-and-conditions-section">
         <h2 class="h2-center">Terms and Conditions</h2>
         <p>Commissions are for personal/non-commercial use only. Commercial use requires additional fees and mutual agreement on terms.</p>
-    
+
         <h2>Declination of Commissions:</h2>
         <ul>
             <li>The artist may decline commissions that violate terms and conditions.</li>
         </ul>
-    
+
         <h2>Initiation of Artwork:</h2>
         <ul>
             <li>Work begins after payment.</li>
             <li>Payment: Full completion through only PayPal in USD is accepted before the production.</li>
         </ul>
-    
+
         <h2>Process Details:</h2>
         <ul>
             <li>Artist shares process; small change requests allowed.</li>
             <li>Significant changes post-color sketch may incur extra charges.</li>
             <li>The final artwork will be sent via email in PNG, JPEG, or PDF format.</li>
         </ul>
-    
+
         <h2>Communication & Notifications</h2>
         <ul>
             <li>Clients notified of issues affecting commission.</li>
             <li>Communication take place through email.</li>
         </ul>
-    
+
         <h2>Request Requirements:</h2>
         <ul>
             <li>Clear requests with references needed.</li>
             <li>Reference sheets and pose ideas crucial; provide before inquiry.</li>
             <li>Incomplete requests may result in additional charges.</li>
         </ul>
-    
+
         <h2>Commercial Use Discussion:</h2>
         <ul>
             <li>Commercial use requires email discussion; fees set at 2x base price.</li>
         </ul>
-    
+
         <h2>Communication and Notifications:</h2>
         <ul>
             <li>No updates after confirming color sketch; process viewable upon request.</li>
         </ul>
-    
+
         <h2>Sharing and Posting:</h2>
         <ul>
             <li>Artist can post on any website, crediting the commissioner</li>
             <li>Illustration rights includes: rights to use for portfolio, rights to use for samples, rights to ownership</li>
             <li>Watermarked versions shared on social networks; credit required if unwatermarked</li>
         </ul>
-    
+
         <h2>Refunds and Cancellations policy:</h2>
         <ul>
             <li>No refunds/cancellations after payment; careful consideration advised.</li>
         </ul>
-    
+
         <h3>DISCLAIMERS:</h3>
         <p>I will draw: OCs/fanart, kawaii, anime <br>
-        I won’t draw: nsfw, gore, mecha, armor, furry, hateful/offensive, realism</p>
-    
+            I won’t draw: nsfw, gore, mecha, armor, furry, hateful/offensive, realism</p>
+
         <h3>THE PROCESS:<br>Inquriy ➜ Agreement ➜ Payment ➜ Production ➜ Delivery</h3>
-    
+
         <h3><strong>Note:</strong> Please be considerate of the artist's time with questions and requests.</h3>
-    
+
         <section class="custom-checkbox-label">
             <h2 class="visibal-items">Agree to Terms</h2>
             <label for="terms-and-condition">
@@ -151,7 +156,7 @@
                 Agree to the Terms and Conditions
             </label>
         </section>
-    </section> 
+    </section>
 
     <section id="commission-form">
         <h2 class="visibal-items">Customer commission request form</h2>
@@ -191,7 +196,7 @@
                     <input type="date" id="deadline-date" name="deadline-date">
                     <button type="button" onclick="saveDeadline()">Save Deadline</button>
                     <p id="deadline-output"></p>
-                </fieldset>             
+                </fieldset>
 
                 <fieldset id="artworks-examples">
                     <legend>Samples of artworks examples</legend>
@@ -252,4 +257,5 @@
         </section>
     </footer>
 </body>
+
 </html>

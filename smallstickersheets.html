@@ -9,7 +9,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/webshop.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -60,6 +60,12 @@
             </a>
         </nav>
 
+        <!-- Header Cart Badge -->
+        <a href="shop-cart-checkout.html" class="header-cart-link">
+            CART
+            <span id="header-cart-count" class="header-cart-badge">0</span>
+        </a>
+
         <!-- Overlay to close menu when clicking outside -->
         <div id="menu-overlay" class="menu-overlay"></div>
     </header>
@@ -90,10 +96,9 @@
                     Discover our 2-pack Small Sticker Sheets – perfect for adding a touch of charm and creativity to any project! Featuring adorable nature-themed characters and designs, these compact sticker sheets are ideal for journals, planners, phone cases, and DIY crafts. Each sheet showcases our exclusive OC’s collection in vibrant colors, making them a delightful addition to your sticker collection. Small in size but big on style – unleash your creativity with these fun and versatile stickers!
                 </p>
                 <h2 class="product-price"><strong>Price:</strong> 120:-</h2>
-                <button class="to-cart-btn" id="toCartButton" 
-                onclick="addToBasketAndRedirect(this, '202', 'Two Pack Small Sticker Sheets', 120, 'images/Twopack-smallstickersheets.jpg', true)">
-                Add To Cart
-            </button>
+                <button class="to-cart-btn" id="toCartButton" onclick="addToBasketAndRedirect(this, '202', 'Two Pack Small Sticker Sheets', 120, 'images/Twopack-smallstickersheets.jpg', true)">
+                    Add To Cart
+                </button>
             </div>
         </section>
     </main>

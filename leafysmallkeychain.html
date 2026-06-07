@@ -9,7 +9,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/webshop.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -60,6 +60,12 @@
             </a>
         </nav>
 
+        <!-- Header Cart Badge -->
+        <a href="shop-cart-checkout.html" class="header-cart-link">
+            CART
+            <span id="header-cart-count" class="header-cart-badge">0</span>
+        </a>
+        
         <!-- Overlay to close menu when clicking outside -->
         <div id="menu-overlay" class="menu-overlay"></div>
     </header>
@@ -97,10 +103,9 @@
                     <li><strong>Collection:</strong> Entire OC series inspired by nature</li>
                 </ul>
                 <h2 class="product-price"><strong>Price:</strong> 100:-</h2>
-                <button class="to-cart-btn" id="toCartButton" 
-                onclick="addToBasketAndRedirect(this, '005', 'Leafy Small Keychain', 100, 'images/leafy-smallkeychain.jpg', true)">
-                Add To Cart
-            </button>
+                <button class="to-cart-btn" id="toCartButton" onclick="addToBasketAndRedirect(this, '005', 'Leafy Small Keychain', 100, 'images/leafy-smallkeychain.jpg', true)">
+                    Add To Cart
+                </button>
             </div>
         </section>
     </main>

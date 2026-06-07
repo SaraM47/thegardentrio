@@ -9,7 +9,7 @@
     <script src="js/main.js" defer></script>
     <script src="js/webshop.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">   
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -57,8 +57,13 @@
                 CART
                 <span id="nav-cart-count" class="cart-badge">0</span>
             </a>
-
         </nav>
+
+        <!-- Header Cart Badge -->
+        <a href="shop-cart-checkout.html" class="header-cart-link">
+            CART
+            <span id="header-cart-count" class="header-cart-badge">0</span>
+        </a>
 
         <!-- Overlay to close menu when clicking outside -->
         <div id="menu-overlay" class="menu-overlay"></div>
@@ -90,10 +95,9 @@
                     Introducing our 2-pack Big Sticker Sheets – a must-have for fans of adorable, nature-inspired designs! Each pack features two uniquely themed sticker sheets: one with lush green forest elements and charming characters, and the other with vibrant floral and water-themed designs. <br><br> These are part of our exclusive OC’s collection, making them perfect for creative crafts and personal projects. Ideal for adding a whimsical touch to your journals, laptops, phone cases, or any surface you choose. High-quality, durable, and easy to peel – bring your creativity to life with these delightful stickers!
                 </p>
                 <h2 class="product-price"><strong>Price:</strong> 170:-</h2>
-                <button class="to-cart-btn" id="toCartButton" 
-                onclick="addToBasketAndRedirect(this, '201', 'Two Pack Big Sticker Sheets', 170, 'images/Twopack-bigsheets.jpg', true)">
-                Add To Cart
-            </button>
+                <button class="to-cart-btn" id="toCartButton" onclick="addToBasketAndRedirect(this, '201', 'Two Pack Big Sticker Sheets', 170, 'images/Twopack-bigsheets.jpg', true)">
+                    Add To Cart
+                </button>
             </div>
         </section>
     </main>
