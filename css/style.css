@@ -1219,16 +1219,6 @@ footer h3 {
   visibility: hidden;
 }
 
-#small-basket-container {
-  background-color: #c1e6a7;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 18rem;
-  margin: 1rem auto;
-  text-align: center;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .checkout-button.submit-order {
   background-color: #086d40;
   color: white;
@@ -1245,14 +1235,6 @@ footer h3 {
 
 .checkout-button.submit-order:hover {
   background-color: #024b41;
-}
-
-#basket-holder li {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-weight: bold;
 }
 
 #chibi-section {
