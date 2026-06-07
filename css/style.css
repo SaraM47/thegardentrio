@@ -1164,6 +1164,65 @@ form label input {
   z-index: 20;
 }
 
+/* Header cart badge, visible top right */
+.header-cart-link {
+  position: fixed;
+  top: 2.5rem;
+  right: 2rem;
+
+  display: none;
+  align-items: center;
+  gap: 0.6rem;
+
+  background-color: #086d40;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 999px;
+
+  padding: 0.8rem 1.4rem;
+
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  z-index: 9999;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.header-cart-link:visited {
+  color: #ffffff;
+}
+
+.header-cart-link:hover {
+  background-color: #ffffff;
+  color: #086d40;
+  border-color: #086d40;
+}
+
+.header-cart-link.visible {
+  display: flex;
+}
+
+.header-cart-badge {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background-color: #b3000f;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  font-weight: bold;
+
+  border: 2px solid #ffffff;
+}
+
 .custom-modal {
   position: fixed;
   inset: 0;
