@@ -1,5 +1,51 @@
 "use strict";
 
+// Logo menu functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const logoMenuBtn = document.getElementById("logo-menu-btn");
+  const compassMenu = document.getElementById("compass-menu");
+  const menuOverlay = document.getElementById("menu-overlay");
+  const menuCloseBtn = document.getElementById("menu-close-btn");
+  const menuLinks = document.querySelectorAll(".goo-menu-item");
+
+  if (!logoMenuBtn || !compassMenu || !menuOverlay) return;
+
+  function setMenuState(isOpen) {
+    compassMenu.classList.toggle("active", isOpen);
+    menuOverlay.classList.toggle("active", isOpen);
+    logoMenuBtn.classList.toggle("active", isOpen);
+    logoMenuBtn.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  logoMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = compassMenu.classList.contains("active");
+    setMenuState(!isOpen);
+  });
+
+  menuOverlay.addEventListener("click", () => {
+    setMenuState(false);
+  });
+
+  if (menuCloseBtn) {
+    menuCloseBtn.addEventListener("click", () => {
+      setMenuState(false);
+    });
+  }
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setMenuState(false);
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      setMenuState(false);
+    }
+  });
+});
+
 // Function to filter the products in shop.html by adding event listeners on category links
 document.addEventListener("DOMContentLoaded", () => {
   const categoryLinks = document.querySelectorAll(".sidebar-content a"); // All links in the list menu
@@ -27,19 +73,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuIcon = document.getElementById("mobile-menu");
   const mobileLinks = document.getElementById("mobile-links");
 
-  // Toggle the mobile menu on click
-  mobileMenuIcon.addEventListener("click", () => {
-    mobileLinks.classList.toggle("active");
-    mobileMenuIcon.classList.toggle("active");
-  });
+  if (mobileMenuIcon) {
+    // Toggle the mobile menu on click
+    mobileMenuIcon.addEventListener("click", () => {
+      mobileLinks.classList.toggle("active");
+      mobileMenuIcon.classList.toggle("active");
+    });
 
-  // Listen for screen size changes
-  window.addEventListener("resize", () => {
-    if (window.innerWidth >= 935) {
-      mobileLinks.classList.remove("active"); // Hides the mobile menu
-      mobileMenuIcon.classList.remove("active"); // Reset the hamburger icon
-    }
-  });
+    // Listen for screen size changes
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 935) {
+        mobileLinks.classList.remove("active"); // Hides the mobile menu
+        mobileMenuIcon.classList.remove("active"); // Reset the hamburger icon
+      }
+    });
+  }
 });
 
 // Function for the individual product pages to-cart button
